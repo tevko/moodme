@@ -1,0 +1,27 @@
+//blocks that make up the app
+
+.blockContainer {
+
+}
+
+.block {
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+	overflow: hidden;
+	img {
+		vertical-align: top;
+	}
+	&-colorPallete {
+		width: 100%;
+		clear: both;
+	}
+}
+
+//color pallete module
+
+.colorPallete-item {
+	width: 150px;
+	height: 150px;
+	background-color: gray;
+}

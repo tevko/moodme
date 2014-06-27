@@ -1,0 +1,103 @@
+// controls for the app
+
+//the controls panel
+
+.uiControlPanel {
+	position: fixed;
+	background-color: $uiControlPanelbg;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	transition: 1s ease;
+	padding: 3em;
+	&[data-state=inactive] {
+		left: -100%;
+	}
+	&[data-state=active] {
+		left: 0;
+	}
+	input, button {
+		outline-color: purple;
+	}
+}
+
+.uiControlPanel-activate {
+	position: fixed;
+	top: 5px;
+	left: -135px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.19);
+	padding: 8px 8px 8px 15px;
+	outline: none;
+	z-index: 2;
+	border-right: solid 2px orange;
+	transition: .5s ease;
+	width: 140px;
+	&:hover {
+		left: 0;
+	}
+}
+
+//form settings
+
+.uiFormModule {
+	margin-bottom: 1em;
+	//general inputs
+	input {
+		border: solid 2px white;
+		background-color: transparent;
+		color: white;
+		padding-left: 5px;
+	}
+	//checkboxes
+	input[type="checkbox"] {
+		display: none;
+		+ label:before {
+			content: '\2717';
+			color: #000;
+			position: absolute;
+			background-color: #fff;
+			left: 105%;
+			top: 1px;
+			padding: 0px 3px;
+		}
+		&:checked + label:before {
+			content: '\2713';
+		}
+	}
+
+	::-webkit-input-placeholder {
+		font-style: italic;
+		color: white;
+	}
+
+	::-moz-input-placeholder {
+		font-style: italic;
+		color: white;
+	}
+
+	::-ms-input-placeholder {
+		font-style: italic;
+		color: white;
+	}
+	//color inputs
+	input[type="color"] {
+		border: none;
+		outline: none;
+	}
+
+	//general labels
+	label {
+		color: white;
+		position: relative;
+	}
+}
+
+.uiFormButton {
+	border: solid 2px white;
+	color: white;
+	background-color: transparent;
+	&:active {
+		border-color: gray;
+	}
+}

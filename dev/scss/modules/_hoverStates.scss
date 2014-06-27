@@ -1,0 +1,94 @@
+
+//transition styles 
+
+$transitionHover: .35s linear;
+
+.containsHover {
+	transition: $transitionHover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: gray;
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	&-content {
+		padding: 0 2em;
+		display: block;
+		margin: 0 auto;
+		p {
+			line-height: 2;
+			animation: .75s slideupOut ease;
+		}
+		h2 {
+			animation: .75s slidedownOut ease;
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: scale(0.0);
+			transition: 1s ease;
+		}
+		video {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&:hover {
+		opacity: 1;
+		h2 {
+			animation: .5s slidedown ease;
+		}
+		p {
+			animation: .5s slideup ease;
+		}
+		img {
+			transform: scale(1.0);
+			transition: 1s ease;
+		}
+	}
+}
+
+@keyframes slideup {
+	from {
+		transform: translateY(400px);
+	}
+
+	to {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes slidedown {
+	from {
+		transform: translateY(-400px);
+	}
+
+	to {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes slideupOut {
+	from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY(400px);
+	}
+}
+
+@keyframes slidedownOut {
+	from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY(-400px);
+	}
+}

@@ -1,0 +1,24 @@
+
+.grid {
+	position: relative;
+	&.fourty {
+		width: 480px;
+	}
+	&.fifty {
+		width: 50%;
+	}
+	&.sixty {
+		width: 720px;
+	}
+	&.nopdng {
+		padding: 0;
+	}
+}
+.left {
+	float: left;
+	padding-right: 20px;
+}
+.right {
+	float: right;
+	padding-left: 20px;
+}

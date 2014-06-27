@@ -1,0 +1,27 @@
+//header
+
+.mainHeader {
+	background-color: $header-bg;
+	padding: 2.5em 0;
+	width: 100%;
+	font-size: 1em;
+	display: table;
+	&-logo {
+		color: $logoclr;
+		font-size: 1.6729166833959999em;
+		text-align: left;
+		font-size: 1.1em;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&-introCopy {
+		color: $introcopy;
+		font-weight: bold;
+		font-size: .8em;
+		line-height: 1.75;
+		vertical-align: middle;
+		margin-top: .12em;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

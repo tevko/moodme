@@ -1,0 +1,45 @@
+//globals
+
+//border box all the things
+
+* {
+    box-sizing: border-box;
+}
+
+//Force Children to self clear
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+//main font: 
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    background-color: $pagebg;
+}
+
+%mainContainer {
+	
+}
+
+.siteContainer {
+    width: 1240px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.valign {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
