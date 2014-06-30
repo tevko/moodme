@@ -7,7 +7,7 @@
 	background-color: $uiControlPanelbg;
 	top: 0;
 	bottom: 0;
-	z-index: 1;
+	z-index: 2;
 	transition: 1s ease;
 	padding: 3em;
 	&[data-state=inactive] {
@@ -29,11 +29,11 @@
 	background-color: rgba(0, 0, 0, 0.19);
 	padding: 8px 8px 8px 15px;
 	outline: none;
-	z-index: 2;
+	z-index: 3;
 	border-right: solid 2px orange;
 	transition: .5s ease;
 	width: 140px;
-	&:hover {
+	&:hover, &:focus {
 		left: 0;
 	}
 }

@@ -30,7 +30,7 @@ gulp.task('injectcss', function() {
     .pipe(inject(gulp.src(['assets/css/styles.min.css']), {
             starttag: '<!-- inject:head:{{ext}} -->',
             transform: function (filePath, file) {
-            // return file contents as string
+            // return file contents as string and wrapped in style tags
             return '<style>' + file.contents.toString('utf8') + '</style>'
         }
     }))

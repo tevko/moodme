@@ -1,5 +1,43 @@
 // all elements that control a block must contain the '.blockWidget' class
 
 .blockWidget {
-	display: none;
+	display: block;
+}
+
+.blockWidget-add {
+	border: dotted 4px $controlsBorder;
+	border-radius: 100%;
+	padding: 10px;
+	cursor: pointer;
+	position: relative;
+	margin-right: 222px;
+}
+
+.blockWidget-settings {
+	position: absolute;
+	top: 0;
+	background-color: $contextMenu;
+	width: 100%;
+	bottom: 0;
+	color: white;
+	transition: .5s ease;
+	padding: 2em 5px;
+	&[data-state=inactive] {
+		left: 100%;
+	}
+	&[data-state=active] {
+		left: 0;
+	}
+}
+
+.blockWidget-settings_Show {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.blockWidget-settings_Submit {
+	color: black;
+	position: absolute;
+	bottom: 5px;
 }

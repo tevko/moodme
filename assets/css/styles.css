@@ -227,6 +227,12 @@ main {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+iframe {
+  height: 100%; }
+
+.blockContent {
+  height: 100%; }
+
 .grid {
   position: relative; }
   .grid.fourty {
@@ -420,7 +426,7 @@ main {
   background-color: rgba(27, 100, 128, 0.98);
   top: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: 1s ease;
   transition: 1s ease;
   padding: 3em; }
@@ -439,12 +445,12 @@ main {
   background-color: rgba(0, 0, 0, 0.19);
   padding: 8px 8px 8px 15px;
   outline: none;
-  z-index: 2;
+  z-index: 3;
   border-right: solid 2px orange;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   width: 140px; }
-  .uiControlPanel-activate:hover {
+  .uiControlPanel-activate:hover, .uiControlPanel-activate:focus {
     left: 0; }
 
 .uiFormModule {
@@ -951,4 +957,37 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   background-image: url(data:image/gif;base64,R0lGODlhFAAUAPcAAAAAAJmZmZ2dnZ6enqKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq/Hx8fLy8vT09PX19ff39/j4+Pn5+fr6+vv7+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAAUABQAAAihAP9FoPCvoMGDBy08+EdhQAIJCCMybCDAAYUEARBAlFiQQoMABQhKUJBxY0SPICEYHBnggEmDKAuoPMjS5cGYMxHW3IiT478JJA8M/CjTZ0GgLRekNGpwAsYABHIypcAgQMsITDtWJYBR6NSqMico9cqR6tKfY7GeBCuVwlipDNmefAtTrkSzB1RaIAoXodsABiZAEFB06gIBWC1mLVgBa0AAOw==); }
 
 .blockWidget {
-  display: none; }
+  display: block; }
+
+.blockWidget-add {
+  border: dotted 4px gray;
+  border-radius: 100%;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 222px; }
+
+.blockWidget-settings {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 100%;
+  bottom: 0;
+  color: white;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  padding: 2em 5px; }
+  .blockWidget-settings[data-state=inactive] {
+    left: 100%; }
+  .blockWidget-settings[data-state=active] {
+    left: 0; }
+
+.blockWidget-settings_Show {
+  position: absolute;
+  top: 0;
+  z-index: 1; }
+
+.blockWidget-settings_Submit {
+  color: black;
+  position: absolute;
+  bottom: 5px; }
