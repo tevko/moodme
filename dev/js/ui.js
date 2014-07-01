@@ -65,6 +65,7 @@ var appUi = {
 
 	editBlocks : function () {
 		var s = this.settings;
+		removeUiItem('.block');
 		$('.blockContainer').on('click', '.blockWidget-settings_Show', function() {
 			var contextMenu = $(this).siblings('.blockWidget-settings');
 			var thisButton = $(this);

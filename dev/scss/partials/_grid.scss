@@ -1,6 +1,9 @@
 
 .grid {
 	position: relative;
+	&.thirty {
+		width: 300px;
+	}
 	&.fourty {
 		width: 480px;
 	}
@@ -9,6 +12,9 @@
 	}
 	&.sixty {
 		width: 720px;
+	}
+	&.ninety {
+		width: 980px;
 	}
 	&.nopdng {
 		padding: 0;

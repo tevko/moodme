@@ -12,3 +12,9 @@ var toggleText = function (activeElem, inactiveText, activeText, clickElem) {
 		clickElem.text(activeText);
 	}
 };
+
+var removeUiItem = function (elem) {
+	$('.blockContainer').on('click','.deletItem', function() {
+		$(this).parent(elem).remove();
+	});
+};

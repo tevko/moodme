@@ -10,5 +10,7 @@
 		launchFullScreen(document.documentElement);
 		//enable UI controls
 		appUi.init();
+        //enable colorPallete functionality
+        colorPallete.init();
     });
 })(jQuery , window );

@@ -5,12 +5,17 @@
 }
 
 .blockWidget-add {
-	border: dotted 4px $controlsBorder;
-	border-radius: 100%;
-	padding: 10px;
 	cursor: pointer;
 	position: relative;
-	margin-right: 222px;
+	width: 25%;
+	height: 200px;
+	text-align: center;
+	img {
+		border: dotted 4px $controlsBorder;
+		border-radius: 100%;
+		padding: 10px;
+		
+	}
 }
 
 .blockWidget-settings {
@@ -40,4 +45,13 @@
 	color: black;
 	position: absolute;
 	bottom: 5px;
+}
+
+.deletItem {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	background-color: orange;
+	border-radius: 100%;
+	top: 0;
 }
